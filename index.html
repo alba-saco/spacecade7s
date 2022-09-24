@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<style type="text/css">
+	html { 
+	  background: url(background.jpeg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	#logo_tilt {
+		top: 0;
+		left: 0;
+		position: absolute;
+		transform: rotate(0deg);
+		z-index: 99;
+	}
+	#text_logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -250px;
+		margin-left: -250px;
+		z-index: -1;
+		filter: invert(73%) sepia(7%) saturate(741%) hue-rotate(89deg) brightness(89%) contrast(91%);
+
+	}
+/*	.logo {
+		background-color: red;
+		-webkit-mask: url(logo.svg) no-repeat center;
+ 		mask: url(logo.svg) no-repeat center;
+	}*/
+
+</style>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="./logo_tilt_white.png" width="300px" id="logo_tilt"></img>
+	<div class="logo">
+		<!-- <img src="./text_logo.svg" width="500px" id="text_logo"></img> -->
+		<svg id="text_logo" width="500px" height="500px">
+			<image href="./text_logo.svg" height="500px" width="500px">
+			</image>
+		</svg>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+	let speedX = .5;
+	let speedY = .5;
+	let positionX = 0;
+	let positionY = 0;
+	let rotation = 0;
+	let invert = 100;
+	let sepia = 100;
+	let saturate = 0;
+	let hue_rotate = 342;
+	let brightness = 106;
+	let contrast = 106;
+	const refreshRate = 1000 / 60;
+
+	const blue1 = {
+		"invert": 82,
+		"sepia": 9,
+		"saturate": 1709,
+		"hue_rotate": 170,
+		"brightness": 97,
+		"contrast": 93
+	}
+
+	const blue2 = {
+		"invert": 51,
+		"sepia": 72,
+		"saturate": 385,
+		"hue_rotate": 168,
+		"brightness": 91,
+		"contrast": 93
+	}
+
+	const green1 = {
+		"invert": 55,
+		"sepia": 7,
+		"saturate": 1104,
+		"hue_rotate": 117,
+		"brightness": 98,
+		"contrast": 93
+	}
+
+	const green2 = {
+		"invert": 73,
+		"sepia": 7,
+		"saturate": 741,
+		"hue_rotate": 89,
+		"brightness": 89,
+		"contrast": 91
+	}
+
+	const blue3 = {
+		"invert": 54,
+		"sepia": 10,
+		"saturate": 1929,
+		"hue_rotate": 154,
+		"brightness": 93,
+		"contrast": 87
+	}
+
+	// const colors = [white, blue, green];
+	color = 1;
+	previous_color = 0
+
+	invert_direction = -1;
+	sepia_direction = -1;
+	saturate_direction = 1;
+	hue_rotate_direction = -1;
+	brightness_direction = -1;
+	contrast_direction = -1;
+
+	hue_rotate = 89;
+
+	logoTilt = document.getElementById("logo_tilt");
+	textLogo = document.getElementById("text_logo");
+
+	logoTiltWidth = logoTilt.style.width;
+	logoTiltHeight = logoTilt.style.height;
+
+	// invert(43%) sepia(55%) saturate(694%) hue-rotate(171deg) brightness(97%) contrast(95%); blue
+
+	logoIntervalCallback = function() {
+		// console.log("calling back");
+		rotation += .5;
+		if (rotation == 360) {
+			rotation = 0;
+		}
+		hue_rotate += 1;
+		if (hue_rotate == 360) {
+			hue_rotate = 0;
+		}
+		logoTilt.style.transform = 'rotate(' + rotation + 'deg)';
+		positionX = positionX + speedX;
+	  	positionY = positionY + speedY;
+	  	var width = (window.innerWidth < screen.width) ? window.innerWidth : screen.width;
+	  	var height = (window.innerHeight < screen.height) ? window.innerHeight : screen.height;
+
+	  	//COLOR CHANGE
+	  // 	color_change = false;
+
+	  // 	if (saturate != colors[color].saturate) {
+	  // 		if (!color_change) {
+		 //  		saturate += saturate_direction;
+		 //  		color_change = true;
+		 //  		console.log("saturate");
+		 //  	}
+	  // 	}
+	  // 	if (invert != colors[color].invert) {
+	  // 		invert += invert_direction;
+	  // 		color_change = true;
+	  // 		console.log("invert");
+	  // 	}
+	  // 	if (sepia != colors[color].sepia) {
+	  // 		if (!color_change) {
+		 //  		sepia += sepia_direction;
+		 //  		color_change = true;
+		 //  		console.log("sepia");
+		 //  	}
+	  // 	}
+
+	  // 	if (contrast != colors[color].contrast) {
+	  // 		if (!color_change) {
+		 //  		contrast += contrast_direction;
+		 //  		color_change = true;
+		 //  		console.log("contrast");
+		 //  	}
+	  // 	}
+
+	  // 	if (hue_rotate != colors[color].hue_rotate) {
+	  // 		if (!color_change) {
+		 //  		hue_rotate += hue_rotate_direction;
+		 //  		color_change = true;
+		 //  		console.log("hue_rotate");
+		 //  	}
+	  // 	}
+	  // 	if (brightness != colors[color].brightness) {
+	  // 		if (!color_change) {
+		 //  		brightness += brightness_direction;
+		 //  		color_change = true;
+		 //  		console.log("brightness");
+		 //  	}
+	  // 	}
+
+	  // 	if (!color_change) {
+	  // 		previous_color = color;
+	  // 		color += 1;
+	  // 		if(color >= colors.length){
+	  // 			color = 0;
+	  // 		}
+	  // 		invert_direction = Math.sign(colors[color].invert - colors[previous_color].invert);
+			// sepia_direction = Math.sign(colors[color].sepia - colors[previous_color].sepia);
+			// saturate_direction = Math.sign(colors[color].saturate - colors[previous_color].saturate);
+			// hue_rotate_direction = Math.sign(colors[color].hue_rotate - colors[previous_color].hue_rotate);
+			// brightness_direction = Math.sign(colors[color].brightness - colors[previous_color].brightness);
+			// contrast_direction = Math.sign(colors[color].contrast - colors[previous_color].contrast);
+	  // 	}
+
+	  	textLogo.style.filter = "invert(73%) sepia(7%) saturate(741%) hue-rotate("+hue_rotate+"deg) brightness(89%) contrast(91%)";
+	  	//POSITION CHANGE
+	  	if (positionX > (width - 250) || positionX < 0) {
+	    	speedX = speedX * (-1);
+	  	}
+	  	if (positionY > (window.innerHeight - 250) || positionY < 0) {
+	  		speedY = speedY * (-1);
+	  	}
+
+	  	if (positionX >= width) {
+	  		logoTilt.style.right = positionX + "px";
+	  		logoTilt.style.top = positionY + 'px';
+	  	}
+	  	else {
+	  		logoTilt.style.left = positionX + 'px';
+	  		logoTilt.style.top = positionY + 'px';
+	  	}
+	}
+
+	bannerInterval = window.setInterval(logoIntervalCallback, refreshRate);
+</script>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<style type="text/css">
+	html { 
+	  background: url(background.jpeg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	#logo_tilt {
+		top: 0;
+		left: 0;
+		position: absolute;
+		transform: rotate(0deg);
+		z-index: 99;
+	}
+	#text_logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -175px;
+		margin-left: -250px;
+		z-index: -1;
+		/*filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(342deg) brightness(106%) contrast(106%);*/
+		/*fill: red !important;*/
+
+	}
+	#text_logo path{
+/*		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -250px;
+		margin-left: -250px;
+		z-index: -1;*/
+		/*filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(342deg) brightness(106%) contrast(106%);*/
+		fill: black;
+
+	}
+/*	.logo {
+		background-color: red;
+		-webkit-mask: url(logo.svg) no-repeat center;
+ 		mask: url(logo.svg) no-repeat center;
+	}*/
+
+</style>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="./logo_tilt_white.png" width="300px" id="logo_tilt"></img>
+	<div class="logo">
+		<!-- <img src="./text_logo.svg" width="500px" id="text_logo"></img> -->
+		<svg id="text_logo" width="500px" height="500px" viewBox="0 0 300 300">
+			<!-- <image href="./text_logo.svg" height="500px" width="500px">
+			</image> -->
+			<g transform="translate(0.000000,205.000000) scale(0.100000,-0.100000)"
+			fill="#000000" stroke="none">
+				<path d="M764 1994 c-56 -28 -69 -64 -69 -199 0 -137 5 -150 87 -249 70 -84
+				79 -106 85 -211 7 -109 0 -145 -26 -145 -27 0 -31 18 -31 136 l0 104 -61 0
+				-61 0 4 -127 c4 -140 16 -178 65 -210 36 -24 130 -24 166 0 56 37 62 57 62
+				227 0 178 -3 186 -89 291 -67 81 -74 95 -82 162 -9 75 2 127 25 127 24 0 31
+				-27 31 -117 l0 -73 61 0 61 0 -4 103 c-5 115 -20 157 -68 182 -37 19 -116 19
+				-156 -1z" fill="url('#gradient')"/>
+				<path d="M1824 1992 c-61 -38 -64 -63 -64 -452 0 -299 2 -355 16 -390 21 -52
+				61 -74 135 -74 111 -1 140 45 147 232 l4 122 -66 0 -66 0 0 -119 c0 -92 -3
+				-120 -14 -124 -33 -13 -36 13 -36 353 0 184 4 341 9 349 5 8 16 11 25 8 13 -5
+				16 -23 16 -97 l0 -90 65 0 65 0 0 70 c0 101 -16 162 -51 196 -39 38 -137 46
+				-185 16z"/>
+				<path d="M1060 1541 l0 -461 60 0 60 0 0 229 0 228 50 6 c61 7 95 29 109 69 6
+				17 11 88 11 158 0 205 -13 222 -182 228 l-108 4 0 -461z m158 337 c16 -16 16
+				-200 0 -216 -32 -32 -38 -14 -38 108 0 122 6 140 38 108z"/>
+				<path d="M1470 1997 c0 -2 -9 -38 -20 -81 -33 -128 -50 -335 -50 -596 l0 -240
+				60 0 60 0 0 90 c0 89 0 90 25 90 25 0 25 -1 25 -90 l0 -90 61 0 61 0 -5 303
+				c-5 306 -17 428 -53 559 l-17 58 -73 0 c-41 0 -74 -2 -74 -3z m97 -424 l6
+				-203 -28 0 -28 0 6 193 c4 105 10 210 14 232 l6 40 9 -30 c5 -16 11 -121 15
+				-232z"/>
+				<path d="M2120 1540 l0 -460 125 0 125 0 0 55 0 54 -62 3 -63 3 -3 178 -2 177
+				60 0 60 0 0 55 0 55 -60 0 -60 0 0 115 0 115 65 0 65 0 0 55 0 55 -125 0 -125
+				0 0 -460z"/>
+				<path d="M611 988 c-84 -31 -93 -86 -89 -502 3 -275 5 -325 19 -351 30 -54 55
+				-69 122 -73 53 -3 67 0 97 20 46 31 59 75 67 215 l6 113 -66 0 -67 0 0 -107
+				c0 -113 -7 -140 -34 -130 -14 6 -16 45 -16 356 0 232 4 352 10 356 6 4 17 1
+				25 -5 11 -9 15 -35 15 -96 l0 -84 66 0 67 0 -7 91 c-8 104 -27 161 -62 184
+				-33 22 -111 28 -153 13z"/>
+				<path d="M2335 993 c-76 -21 -100 -69 -100 -203 0 -129 11 -161 82 -248 81
+				-98 93 -128 93 -247 0 -105 -8 -132 -34 -122 -13 5 -16 26 -16 127 l0 120 -66
+				0 -67 0 5 -123 c8 -185 34 -229 141 -235 76 -4 120 19 144 76 22 49 24 279 4
+				336 -7 21 -42 74 -77 117 -35 43 -69 90 -74 104 -13 35 -13 182 0 190 6 4 17
+				1 25 -5 11 -9 15 -35 15 -96 l0 -84 66 0 67 0 -6 91 c-8 100 -32 170 -66 189
+				-25 13 -107 21 -136 13z"/>
+				<path d="M956 981 c-11 -17 -38 -147 -52 -251 -8 -58 -18 -230 -21 -382 l-6
+				-278 61 0 61 0 3 88 c3 85 3 87 28 87 25 0 25 -2 28 -88 l3 -87 59 0 60 0 0
+				178 c0 287 -25 548 -66 690 l-15 52 -69 0 c-38 0 -71 -4 -74 -9z m94 -362 c15
+				-270 16 -259 -22 -259 l-31 0 7 158 c9 209 17 295 28 284 4 -4 13 -87 18 -183z"/>
+				<path d="M1250 531 l0 -463 109 4 c194 6 193 3 189 478 -4 442 3 426 -195 437
+				l-103 6 0 -462z m151 339 c18 -10 19 -25 19 -338 0 -333 -2 -352 -37 -352 -10
+				0 -13 69 -13 350 0 193 3 350 6 350 3 0 14 -5 25 -10z"/>
+				<path d="M1619 986 c-2 -2 -3 -209 -1 -460 l2 -456 120 0 120 0 0 55 0 55 -60
+				0 -60 0 0 180 0 180 60 0 60 0 0 50 0 50 -60 0 -60 0 0 120 0 120 60 0 60 0 0
+				55 0 55 -118 0 c-65 0 -121 -2 -123 -4z"/>
+				<path d="M1922 928 l3 -53 84 -3 83 -3 -7 -47 c-4 -26 -26 -115 -50 -198 -52
+				-179 -72 -289 -81 -441 l-7 -113 65 0 65 0 6 133 c6 135 18 210 62 377 34 131
+				55 261 55 336 l0 64 -141 0 -140 0 3 -52z"/>
+			</g>
+		</svg>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+	let speedX = 1;
+	let speedY = 1;
+	let positionX = 0;
+	let positionY = 0;
+	let rotation = 0;
+	let invert = 100;
+	let sepia = 100;
+	let saturate = 0;
+	let hue_rotate = 342;
+	let brightness = 106;
+	let contrast = 106;
+	const refreshRate = 1000 / 60;
+
+	const white = {
+		"invert": 100,
+		"sepia": 100,
+		"saturate": 0,
+		"hue_rotate": 342,
+		"brightness": 106,
+		"contrast": 106
+	}
+
+	// const white = parseInt('FFFFFF', 16);
+	// console.log(white);
+	// const blue = parseInt('1f60bf', 16);
+	// console.log(blue);
+	// console.log(blue.toString(16));
+
+	const blue = {
+		"invert": 43,
+		"sepia": 55,
+		"saturate": 694,
+		"hue_rotate": 171,
+		"brightness": 97,
+		"contrast": 95
+	}
+
+	const green = {
+		"invert": 72,
+		"sepia": 4,
+		"saturate": 2132,
+		"hue_rotate": 54,
+		"brightness": 86,
+		"contrast": 78
+	}
+
+	const light_blue = {
+		"invert": 85,
+		"sepia": 4,
+		"saturate": 4351,
+		"hue_rotate": 170,
+		"brightness": 100,
+		"contrast": 103
+	}
+
+	const colors = [white, blue];
+	color = white;
+	previous_color = 0
+
+	color_direction = 1;
+
+	// invert_direction = -1;
+	// sepia_direction = -1;
+	// saturate_direction = 1;
+	// hue_rotate_direction = -1;
+	// brightness_direction = -1;
+	// contrast_direction = -1;
+
+	logoTilt = document.getElementById("logo_tilt");
+	textLogo = document.getElementById("text_logo");
+	textLogoPaths = textLogo.getElementsByTagName("path");
+	console.log(textLogoPaths);
+
+	logoTiltWidth = logoTilt.style.width;
+	logoTiltHeight = logoTilt.style.height;
+
+	// invert(43%) sepia(55%) saturate(694%) hue-rotate(171deg) brightness(97%) contrast(95%); blue
+
+	logoIntervalCallback = function() {
+		// console.log("calling back");
+		rotation += 1;
+		if (rotation == 360) {
+			rotation = 0;
+		}
+		logoTilt.style.transform = 'rotate(' + rotation + 'deg)';
+		positionX = positionX + speedX;
+	  	positionY = positionY + speedY;
+	  	var width = (window.innerWidth < screen.width) ? window.innerWidth : screen.width;
+	  	var height = (window.innerHeight < screen.height) ? window.innerHeight : screen.height;
+
+	  	//COLOR CHANGE
+	  	// console.log(color)
+	 //  	color -= 1;
+	 //  	color_hex = color.toString(16);
+	 //  	console.log(color_hex);
+	 //  	//console.log(color_hex);
+	 //  	for (var i = 0; i < textLogoPaths.length; i++) {
+		//     textLogoPaths[i].style.fill = "#" + color_hex;
+		// }
+
+
+	  	color_change = false;
+
+	  	if (saturate != colors[color].saturate) {
+	  		if (!color_change) {
+		  		saturate += saturate_direction;
+		  		color_change = true;
+		  		console.log("saturate");
+		  	}
+	  	}
+	  	if (invert != colors[color].invert) {
+	  		invert += invert_direction;
+	  		color_change = true;
+	  		console.log("invert");
+	  	}
+	  	if (sepia != colors[color].sepia) {
+	  		if (!color_change) {
+		  		sepia += sepia_direction;
+		  		color_change = true;
+		  		console.log("sepia");
+		  	}
+	  	}
+
+	  	if (contrast != colors[color].contrast) {
+	  		if (!color_change) {
+		  		contrast += contrast_direction;
+		  		color_change = true;
+		  		console.log("contrast");
+		  	}
+	  	}
+
+	  	if (hue_rotate != colors[color].hue_rotate) {
+	  		if (!color_change) {
+		  		hue_rotate += hue_rotate_direction;
+		  		color_change = true;
+		  		console.log("hue_rotate");
+		  	}
+	  	}
+	  	if (brightness != colors[color].brightness) {
+	  		if (!color_change) {
+		  		brightness += brightness_direction;
+		  		color_change = true;
+		  		console.log("brightness");
+		  	}
+	  	}
+
+	  	if (!color_change) {
+	  		previous_color = color;
+	  		color += 1;
+	  		if(color >= colors.length){
+	  			color = 0;
+	  		}
+	  		invert_direction = Math.sign(colors[color].invert - colors[previous_color].invert);
+			sepia_direction = Math.sign(colors[color].sepia - colors[previous_color].sepia);
+			saturate_direction = Math.sign(colors[color].saturate - colors[previous_color].saturate);
+			hue_rotate_direction = Math.sign(colors[color].hue_rotate - colors[previous_color].hue_rotate);
+			brightness_direction = Math.sign(colors[color].brightness - colors[previous_color].brightness);
+			contrast_direction = Math.sign(colors[color].contrast - colors[previous_color].contrast);
+	  	}
+
+	  	textLogo.style.filter = "invert("+invert+"%) sepia("+sepia+"%) saturate("+saturate+"%) hue-rotate("+hue_rotate+"deg) brightness("+brightness+"%) contrast("+contrast+"%)";
+	  	//POSITION CHANGE
+	  	if (positionX > (width - 250) || positionX < 0) {
+	    	speedX = speedX * (-1);
+	  	}
+	  	if (positionY > (window.innerHeight - 250) || positionY < 0) {
+	  		speedY = speedY * (-1);
+	  	}
+
+	  	if (positionX >= width) {
+	  		logoTilt.style.right = positionX + "px";
+	  		logoTilt.style.top = positionY + 'px';
+	  	}
+	  	else {
+	  		logoTilt.style.left = positionX + 'px';
+	  		logoTilt.style.top = positionY + 'px';
+	  	}
+	}
+
+	bannerInterval = window.setInterval(logoIntervalCallback, refreshRate);
+</script>
